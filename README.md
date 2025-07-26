@@ -1,65 +1,67 @@
 # Autocorrect & Autocomplete using GPT-2 and NLTK
 
-This project leverages **GPT-2** and **NLTK** to perform **autocorrection** and **autocomplete** on English sentences, with contextual understanding and visual feedback. It uses a sample from Jane Austen’s *Emma* (Gutenberg Corpus) and offers insights through word clouds and confidence score plots.
+This project implements autocorrection and autocomplete functionality using the GPT-2 language model along with NLTK. It processes English sentences, predicts contextually accurate completions, and corrects spelling errors with confidence visualization. The dataset used is Jane Austen’s *Emma* from the NLTK Gutenberg Corpus.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-- `autocorrect_autocomplete.ipynb` – Main Colab notebook with code
-- `corrected_words_wordcloud.png` – Word cloud image of corrected words
-- `gpt2_confidence_plot.png` – Line graph showing model confidence per word
-- Dependencies: `nltk`, `transformers`, `torch`, `matplotlib`, `wordcloud`
-
----
-
-## 🔧 Features
-
-- ✅ Sentence cleaning and tokenization  
-- ✅ Vocabulary building using NLTK corpus  
-- ✅ **Autocomplete** using GPT-2  
-- ✅ **Autocorrect** using GPT-2 context scoring  
-- ✅ Visualization of corrected words and confidence scores
+- `autocorrect_autocomplete.ipynb` – Main Colab notebook
+- `corrected_words_wordcloud.png` – Word cloud of corrected words
+- `gpt2_confidence_plot.png` – Line graph showing model confidence
+- Requirements: `nltk`, `transformers`, `torch`, `matplotlib`, `wordcloud`
 
 ---
 
-## 🧪 Sample Input & Output
+## Features
 
-### 🔹 Autocorrect  
-**Original Sentence:** `thnaks`  
-**Corrected Sentence:** `thanks`
-
-### 🔹 Autocomplete  
-**Input:** `Did you`  
-**Prediction:** `ever look at the faces of your friends and you`
-
-📊 The visualizations (word cloud and confidence score plot) are generated based on the above examples.
+- Sentence cleaning and tokenization  
+- Vocabulary generation using NLTK corpus  
+- Autocomplete using GPT-2  
+- Autocorrect using GPT-2 scoring mechanism  
+- Word cloud and confidence score visualization
 
 ---
 
-## 📷 Sample Visualizations
+## Sample Input and Output
 
-### 🟣 GPT-2 Confidence Score Plot
-![GPT-2 Confidence]([gpt2_confidence_plot.png](https://github.com/gagandeep1763/Autocorrect-Autocomplete-with-GPT-2-and-NLTK/blob/main/gpt2_confidence_plot.png))
+**Autocorrect**  
+- Input: `thnaks`  
+- Output: `thanks`  
 
-### 🟢 Word Cloud of Corrected Words
-![Word Cloud]([corrected_words_wordcloud.png](https://github.com/gagandeep1763/Autocorrect-Autocomplete-with-GPT-2-and-NLTK/blob/main/corrected_words_wordcloud.png))
+**Autocomplete**  
+- Input: `Did you`  
+- Output: `ever look at the faces of your friends and you`
 
----
-
-## 💡 How It Works
-
-### 🔸 Autocomplete  
-Uses GPT-2 to generate the next few words based on user input. Temperature and sampling settings are used for diversity in predictions.
-
-### 🔸 Autocorrect  
-Misspelled words are matched with the closest candidates using `difflib`, then ranked using GPT-2 language model loss score based on the context. The best-scoring candidate is selected.
+Visuals are based on these inputs.
 
 ---
 
-## 🧰 Installation & Setup
+## Visualizations
 
-In Google Colab or a Python environment:
+### GPT-2 Confidence Score Plot  
+Displays GPT-2 model confidence per word (lower loss means higher confidence):  
+![Confidence Plot](https://github.com/gagandeep1763/Autocorrect-Autocomplete-with-GPT-2-and-NLTK/blob/main/gpt2_confidence_plot.png)
+
+### Word Cloud of Corrected Words  
+Shows frequently corrected words using NLTK + GPT-2 logic:  
+![Word Cloud](https://github.com/gagandeep1763/Autocorrect-Autocomplete-with-GPT-2-and-NLTK/blob/main/corrected_words_wordcloud.png)
+
+---
+
+## How It Works
+
+### Autocomplete  
+GPT-2 generates a sequence of probable words based on the given input using token prediction. Sampling methods control the output diversity.
+
+### Autocorrect  
+Misspelled words are matched to similar candidates using `difflib`. GPT-2 scores each candidate in context and selects the one with the lowest loss (highest confidence).
+
+---
+
+## Installation
+
+Use the following command in Colab or a Python environment:
 
 ```bash
-pip install nltk matplotlib transformers wordcloud torch --quiet
+pip install nltk matplotlib transformers wordcloud torch
