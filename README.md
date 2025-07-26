@@ -65,3 +65,10 @@ Use the following command in Colab or a Python environment:
 
 ```bash
 pip install nltk matplotlib transformers wordcloud torch
+
+
+## Developed By
+
+**Gagandeep D**  
+Google Certified UI/UX Designer  
+Aspiring Data Analyst
