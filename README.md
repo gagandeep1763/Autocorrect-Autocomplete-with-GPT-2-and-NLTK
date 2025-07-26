@@ -59,6 +59,13 @@ Misspelled words are matched to similar candidates using `difflib`. GPT-2 scores
 
 ---
 
+
+## Developed By
+
+**Gagandeep D**  
+Google Certified UI/UX Designer  
+Aspiring Data Analyst 
+
 ## Installation
 
 Use the following command in Colab or a Python environment:
@@ -67,8 +74,3 @@ Use the following command in Colab or a Python environment:
 pip install nltk matplotlib transformers wordcloud torch
 
 
-## Developed By
-
-**Gagandeep D**  
-Google Certified UI/UX Designer  
-Aspiring Data Analyst
