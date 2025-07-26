@@ -1,4 +1,4 @@
-# 🔤 Autocorrect & Autocomplete using GPT-2 and NLTK
+# Autocorrect & Autocomplete using GPT-2 and NLTK
 
 This project leverages **GPT-2** and **NLTK** to perform **autocorrection** and **autocomplete** on English sentences, with contextual understanding and visual feedback. It uses a sample from Jane Austen’s *Emma* (Gutenberg Corpus) and offers insights through word clouds and confidence score plots.
 
